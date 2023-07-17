@@ -94,23 +94,8 @@ let startDate = window.performance.now();;
 
 new Riddle().generate(COUNT)
 	.calculate(RULES)
-	// .baseMatching()
-	// .reverseMatching()
 	.shuffleMatching(SHUFFLES_NUMBER)
-	// .addRules([
-	// 	{
-	// 		position: 3,
-	// 		color: 'red'
-	// 	},
-	// 	{
-	// 		position: 2,
-	// 		nation: 'ukrainian'
-	// 	},
-	// ])
 	.guess()
-	// .shuffleMatching(10)
-
 
 let finishDate = window.performance.now();
-console.log(+finishDate - +startDate);
-
+console.log('Время выполнения', finishDate - startDate, 'мс');
