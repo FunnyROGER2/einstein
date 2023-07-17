@@ -20,7 +20,7 @@ export interface Rule {
 	neighborSecond?: NeighborFilter,
 };
 
-export default class Problem {
+export default class Riddle {
 	private filters = ['position', 'color', 'nation', 'drink', 'pet', 'currency'];
 	private isMatched = false;
 	private rules: Rule[] = [];

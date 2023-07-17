@@ -1,4 +1,4 @@
-import Problem, { Rule } from "./problem";
+import Riddle, { Rule } from "./riddle";
 
 const COUNT = 5;
 const RULES: Rule[] = [
@@ -88,7 +88,7 @@ const RULES: Rule[] = [
 	},
 ];
 
-new Problem().generate(COUNT)
+new Riddle().generate(COUNT)
 	.calculate(RULES)
 	// .baseMatching()
 	// .reverseMatching()
