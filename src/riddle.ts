@@ -1,4 +1,5 @@
 import House from "./house";
+import { SHUFFLES_NUMBER } from ".";
 
 type BaseFilter = 'color' | 'nation' | 'drink' | 'pet' | 'currency' | 'position' | undefined
 
@@ -172,7 +173,7 @@ export default class Riddle {
 					this.showResult(this.collectionGuess, true);
 					break mainLoop;
 				}
-				this.shuffleMatching(10, this.collectionGuess);
+				this.shuffleMatching(SHUFFLES_NUMBER, this.collectionGuess);
 			}
 		}
 	}

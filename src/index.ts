@@ -1,5 +1,7 @@
 import Riddle, { Rule } from "./riddle";
 
+export const SHUFFLES_NUMBER = 10;
+
 const COUNT = 5;
 const RULES: Rule[] = [
 	{
@@ -88,11 +90,13 @@ const RULES: Rule[] = [
 	},
 ];
 
+let startDate = window.performance.now();;
+
 new Riddle().generate(COUNT)
 	.calculate(RULES)
 	// .baseMatching()
 	// .reverseMatching()
-	.shuffleMatching(10)
+	.shuffleMatching(SHUFFLES_NUMBER)
 	// .addRules([
 	// 	{
 	// 		position: 3,
@@ -105,3 +109,8 @@ new Riddle().generate(COUNT)
 	// ])
 	.guess()
 	// .shuffleMatching(10)
+
+
+let finishDate = window.performance.now();
+console.log(+finishDate - +startDate);
+
