@@ -2,8 +2,8 @@ import Riddle, { Rule } from "./riddle";
 
 export const SHUFFLES_NUMBER = 10;
 
-const COUNT = 5;
-const RULES: Rule[] = [
+const HOUSES_COUNT = 5;
+const HOUSES_RULES: Rule[] = [
 	{
 		nation: 'english',
 		color: 'red'
@@ -90,11 +90,43 @@ const RULES: Rule[] = [
 	},
 ];
 
+const STUFF_COUNT = 3;
+// const STUFF_RULES: Rule[] = [
+// 	{
+// 		job: 'cashier',
+// 		position: 1
+// 	},
+// 	{
+// 		job: 'cashier',
+// 		family: 'no'
+// 	},
+// 	{
+// 		name: 'Bill',
+// 		family: 'sister'
+// 	},
+// 	{
+// 		neighborFirst: {
+// 			filterName: 'name',
+// 			filterValue: 'Mark',
+// 			side: ['right']
+// 		},
+// 		neighborSecond: {
+// 			filterName: 'job',
+// 			filterValue: 'collector'
+// 		}
+// 	},
+// 	{
+// 		name: 'Mark',
+// 		family: 'wife'
+// 	},
+// ]
+
 let startDate = window.performance.now();;
 
-new Riddle().generate(COUNT)
-	.calculate(RULES)
+new Riddle().generate(HOUSES_COUNT)
+	.calculate(HOUSES_RULES)
 	.shuffleMatching(SHUFFLES_NUMBER)
+	// .showResult(true)
 	.guess()
 
 let finishDate = window.performance.now();

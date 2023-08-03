@@ -8,5 +8,6 @@
     "allowJs": true,
     "moduleResolution": "node",
     "sourceMap": true
-  }
+  },
+  "exclude": ["src/_*.ts"]
 }
